@@ -1,0 +1,32 @@
+﻿audit_check,observed_value,decision
+Original data DOI,10.17632/d7j3s64vvr.1,base dataset metadata reference; any user-supplied extension must be documented separately
+Frozen audit version,v18.0-teknika-sinta2-execution-guardrails,two_stage_training_optional_and_audit
+Input CSV signature SHA-256,2a476134a9b27dcf28639574dcdd68b3b5580a951cd37763fe3e5a95706c1d72,computed
+Historical daily region observations in panel,59184,pass
+Post-2025 temporal rows,0,not_provided
+Recorded positive region-days in panel,1358,pass
+2025 test region-days,9855,pass
+2025 recorded positive region-days,296,pass
+Test region count,27,pass
+Rainfall-matrix station headers,460,source_matrix
+Station headers with confirmed station ID,458,not_all_confirmed
+Verified feature availability at issuance clock,unverified,date_only_flood_event
+2025 confirmatory holdout status,reused_in_v3_to_v8,exploratory_only
+External 2026 outcome data,0,prospective_evaluation_pending
+Reported flood versus confirmed absence,no_report_is_not_confirmed_negative,label_bias_warning
+Model development history,2025 previously inspected,2025 metrics remain exploratory despite retraining; future outcomes must not influence model selection
+Frozen model bundle,/content/drive/MyDrive/Flood_Research_Mendeley_v1/cache/frozen_model_bundle_fe8bc39e393c2c1d.joblib,saved outside publication outputs when full training was run
+Source workbook SHA-256: Data-Ch-Jabar-2020-2025.xlsx,92a207057853ed063fa4548892e515ae7d160f582a4469cde20f268e4230c99f,verified_during_source_load
+Source workbook SHA-256: Dataset_Flood_2020-2025.xlsx,a5265db438bac4bd49d4a27d5dedba2d8beca405c49a5644630f6292858f3c28,verified_during_source_load
+Source workbook SHA-256: Dataset_Rainfall_Floods_2020-2025.xlsx,c873bf2fa9a503f599db803325137ccf6149532254550517323ac9e6c4ae1d89,verified_during_source_load
+Source workbook SHA-256: West_Java_Rainfall_Station_Metadata_Lengkap.xlsx,15afa28cec99f00825f97e7b5915d1a5caff7d16eb84851fe2d3a616c694d89a,verified_during_source_load
+Model pipeline version,v8.0.0-locked-temporal-missingness-prospective-audit-20261018,locked_version
+Model signature,fe8bc39e393c2c1d,exact-source-and-model-specification-signature
+Feature engineering version,lagged-region-rainfall-v3,locked_version
+Random seed,42,locked
+FAST_TEST mode,False,must_be_false_for_publication_grade_output
+Missingness replicates per scenario,100,full_run_target_100
+Primary date-block bootstrap repetitions,1000,full_run_target_1000
+Calibration date-block bootstrap repetitions,600,full_run_target_600
+Historical calendar continuity,2192 daily dates × 27 regions,pass_complete_region_day_panel
+Outcome interpretation,recorded flood report,not independently verified physical flood truth

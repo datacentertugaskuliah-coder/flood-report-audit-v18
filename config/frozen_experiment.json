@@ -1,0 +1,51 @@
+{
+  "reporting_version": "v18.0-teknika-sinta2-execution-guardrails",
+  "embedded_evidence_audit_version": "v15.0-locked-temporal-prospective-validation-audit",
+  "pipeline_version": "v8.0.0-locked-temporal-missingness-prospective-audit-20261018",
+  "recorded_model_signature": "fe8bc39e393c2c1d",
+  "signature_validation": "recorded in supplied output; model bundle absent, not independently reconstructed",
+  "feature_version": "lagged-region-rainfall-v3",
+  "pipeline_seed": 42,
+  "reporting_audit_seed": 20261018,
+  "fast_test": false,
+  "missingness_replicates": 100,
+  "missingness_levels": [
+    0,
+    0.1,
+    0.2,
+    0.3
+  ],
+  "primary_bootstrap": {
+    "replicates": 1000,
+    "block_days": 7
+  },
+  "sensitivity_bootstrap": {
+    "replicates": 300,
+    "block_days": [
+      14,
+      30
+    ]
+  },
+  "calibration_bootstrap": {
+    "replicates": 600,
+    "block_days": 7
+  },
+  "bootstrap_method": "non-circular chronological date blocks; all regions on a sampled date kept together",
+  "training": "2020-2023",
+  "calibration_and_threshold": "2024",
+  "exploratory_evaluation": "2025",
+  "outcome": "recorded flood report per region-day; no report is not confirmed flood absence",
+  "recorded_evidence_signature_sha256": "2a476134a9b27dcf28639574dcdd68b3b5580a951cd37763fe3e5a95706c1d72",
+  "source_doi": "10.17632/d7j3s64vvr.1",
+  "source_sha256": {
+    "Data-Ch-Jabar-2020-2025.xlsx": "92a207057853ed063fa4548892e515ae7d160f582a4469cde20f268e4230c99f",
+    "Dataset_Flood_2020-2025.xlsx": "a5265db438bac4bd49d4a27d5dedba2d8beca405c49a5644630f6292858f3c28",
+    "Dataset_Rainfall_Floods_2020-2025.xlsx": "c873bf2fa9a503f599db803325137ccf6149532254550517323ac9e6c4ae1d89",
+    "West_Java_Rainfall_Station_Metadata_Lengkap.xlsx": "15afa28cec99f00825f97e7b5915d1a5caff7d16eb84851fe2d3a616c694d89a"
+  },
+  "package_status": "aggregate evidence package, incomplete for independent end-to-end reproduction",
+  "raw_data_included": false,
+  "fitted_bundle_included": false,
+  "observation_probabilities_included": false,
+  "original_runtime_lock_included": false
+}

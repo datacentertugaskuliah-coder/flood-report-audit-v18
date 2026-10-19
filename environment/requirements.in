@@ -1,0 +1,12 @@
+# Dependency inventory inferred from imports. NOT a historical lock or verified environment.
+numpy
+pandas
+matplotlib
+scikit-learn
+scipy
+openpyxl
+requests
+joblib
+Pillow
+ipython
+nbformat

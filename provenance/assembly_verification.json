@@ -1,0 +1,23 @@
+{
+  "checked_files": 44,
+  "publication_png": 10,
+  "publication_csv": 10,
+  "status": "PASS_WITH_DOCUMENTED_MISSING_ARTIFACTS",
+  "checks": [
+    "SHA-256 baseline",
+    "original attachment digests",
+    "original ZIP member byte equality",
+    "notebook configuration",
+    "Table 3 signature and seed",
+    "aggregate AP/Brier differences",
+    "bootstrap and simulation counts"
+  ],
+  "not_verified": [
+    "raw data",
+    "fitted model internals",
+    "observation probabilities",
+    "original runtime",
+    "independent end-to-end numerical reproduction"
+  ],
+  "checked_at_utc": "2026-10-19T06:29:47.012477+00:00"
+}

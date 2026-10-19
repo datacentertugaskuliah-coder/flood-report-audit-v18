@@ -1,0 +1,40 @@
+﻿evidence_gate,decision,reason_or_result
+Exact dataset version and source DOI,PASS,10.17632/d7j3s64vvr.1
+Recomputed 2025 model AP / Brier,PASS,Metrics recomputed from row-level probabilities and match saved values
+Future observation leakage,REQUIRES_METHODS_ATTESTATION,"All rainfall features use lags, but issue-time availability and report timestamp are unverified"
+Negative label validity,LIMITATION,No report does not imply physically confirmed absence of a flood
+Prospective at-risk onset denominator corrected,PASS,"Eligible 8,286 region-days; 179 recorded onset positives; 1569 ineligible post-report region-days"
+At-risk onset paired AP inference,EXPLORATORY_ONLY,Non-circular 7/14/30-day block sensitivity; confidence intervals include zero for key comparisons
+Evidence against strongest single learner,NONCONCLUSIVE,"Stress AP gain over HistGradientBoosting is 0.00455; nominal 7-day interval barely excludes zero, but 14/30-day and multiplicity-adjusted intervals include zero"
+Robustness of AP under station missingness,CONTRADICTED_AS_UNIVERSAL_CLAIM,"Across paired missingness replicates, the mean fraction with stress AP > standard was 1.1%"
+Missingness simulation replication count,PASS,Minimum replicates per mechanism-severity-model group: 100; target is 100 for the full frozen-evidence run
+Cluster-dependent calibration-bin uncertainty,EXPLORATORY_ONLY,Non-circular 7-day date-block bootstrap; fixed bins and reused test remain limitations
+Brier / probabilistic performance,EXPLORATORY_POSITIVE,Stress Brier=0.028106; relative improvement vs standard=0.55%; 2025 remains exploratory
+Mean-risk calibration under prevalence shift,UNDERPREDICTION_RISK,Stress mean predicted probability=2.92% vs observed report prevalence=3.00%; gap=-0.083 percentage points
+Temporal reporting and coverage drift,MATERIAL_RISK,"Reported-positive rate train=2.03%, 2024=2.63%, 2025=3.00%; mean station coverage train=93.92%, 2024=97.72%, 2025=99.73%"
+Regional subgroup support,LIMITED,Only 11/27 regions have >=10 test positives
+Independent post-2025 temporal holdout,MISSING,Tidak tersedia observasi setelah 2025; hasil 2025 tetap eksploratif.
+Prospective validation after model lock,MISSING,Tidak tersedia observasi setelah 2025; hasil 2025 tetap eksploratif.
+Future model-signature consistency,NOT_APPLICABLE,Future predictions must carry the same frozen model signature as the fitted model bundle
+Future data independence attestation,NOT_ATTESTED,"Set the attestation flag to True only when post-2025 outcomes were not used to design, select, or tune the model"
+Reported label onset time and lead horizon,MISSING,Daily labels lack verified intra-day onset time; do not claim a 24-hour warning horizon
+External rainfall station map and regional matching,AUDIT_REQUIRED,458 of 460 station headers map to confirmed station IDs; document remaining stations and metadata limitations
+Novelty against current literature,NOT_ASSESSED,A systematic comparison against recent uncertainty-aware ensembles and flood-report forecasting studies is still required
+Data and code availability for submission,INCOMPLETE,"Dataset DOI is known; archive the final notebook, environment, model artifact, data dictionary, and versioned outputs in a persistent repository"
+Operational decision utility,NOT_VALIDATED,"Top-k alerts are retrospective; evaluate false-alert cost, missed-event cost, and actual lead time before operational claims"
+Scientific claim permissible,QUALIFIED,"Current evidence supports an exploratory calibration/Brier signal, not a confirmed general discrimination advantage"
+Submission decision,NOT_READY,"Resolve outcome validity, temporal drift, independent validation, station provenance, and novelty before submission"
+Claim audit: universal AP robustness under missingness,NOT_SUPPORTED,"Across paired mechanism-severity groups, stress-trained AP exceeded standard stacking in 1.1% of replicates on average. Do not claim universal AP robustness when this proportion is below 50%."
+Claim audit: confirmatory AP superiority across block lengths,NOT_CONCLUSIVE,Confirmatory superiority requires lower confidence bounds above zero across all tested block lengths and the multiplicity sensitivity interval. Raw lower bounds all positive=False; adjusted lower bounds all positive=False. Current 2025 results remain exploratory.
+Claim audit: independent post-2025 temporal validation,MISSING,No qualifying independent post-2025 temporal holdout is available. Do not describe 2025 as an independent confirmatory test.
+Claim audit: interpretation of negative labels,LIMITATION,A region-day without a flood report is not confirmed flood absence. Use recorded-report terminology unless an independently verified event inventory is obtained.
+Claim audit: overall Teknika SINTA-2 submission readiness,NOT_READY,"The 2025 test was repeatedly inspected, outcome labels are report-based, station mapping is incomplete, and novelty against current literature remains to be assessed. A higher AP alone cannot close these gaps."
+Teknika fit: ICT and machine-learning scope,ALIGNED,"Flood-report prediction, machine learning, missing-data robustness, and probabilistic evaluation fit the journal's ICT scope."
+"Teknika format: English, 6-10 A4 pages, two columns",MANUSCRIPT_CHECK_REQUIRED,Verify the final Word manuscript against the current Teknika template. Notebook outputs do not establish page count or layout compliance.
+Teknika abstract and keywords,MANUSCRIPT_CHECK_REQUIRED,The journal guideline specifies an abstract of at most 250 words and up to five keywords. Verify these in the final English manuscript.
+Teknika double-blind review preparation,MANUSCRIPT_CHECK_REQUIRED,Prepare an anonymized review file and move identifying author information to the designated submission metadata or title page as required by the current system.
+Teknika similarity index below 25 percent,EXTERNAL_CHECK_REQUIRED,The journal guideline states a similarity index below 25 percent. This cannot be verified by this notebook; run a reputable similarity checker and interpret matches manually.
+Teknika generative-AI disclosure,AUTHOR_DECLARATION_REQUIRED,"If generative AI assisted drafting, editing, or translation, follow the journal's current AI policy and add the required disclosure. Authors remain responsible for accuracy."
+"Teknika call-for-papers deadline for Vol. 15 No. 3, November 2026",DEADLINE_PASSED,"The posted call lists 30 September 2026 as the deadline. As of 18 October 2026, confirm the next active call or general-submission window with the journal."
+Teknika publication charge,CONFIRM_BEFORE_SUBMISSION,"The journal announcement dated 10 August 2026 states an APC of IDR 1,250,000 effective from Vol. 15 No. 3 (November 2026), with an optional non-refundable fast-track fee. Confirm current terms directly."
+Teknika readiness decision,NOT_READY,"Scope alignment is promising, but submission readiness still depends on a qualifying frozen-model temporal holdout, label validity, leakage audit, complete station mapping, novelty review, and compliance checks in the final manuscript. The notebook cannot guarantee acceptance."
